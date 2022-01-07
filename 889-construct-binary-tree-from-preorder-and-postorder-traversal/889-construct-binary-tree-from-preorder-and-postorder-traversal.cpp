@@ -12,7 +12,8 @@
 class Solution {
     unordered_map<int, int> m;
     
-    TreeNode* build(vector<int>& preorder, vector<int>& postorder, int start, int end, int& index, int size) {
+    TreeNode* build(vector<int>& preorder, vector<int>& postorder, int start, int end, int& index, int size) 
+    {
         
         if(start > end || index >= size) return NULL;
         
