@@ -2,7 +2,7 @@ class Solution {
 public:
     int candy(vector<int>& ratings) {
         
-         int n = ratings.size();
+        int n = ratings.size();
         if(n == 1) return 1;
         
         vector<int> v(n, 1);
