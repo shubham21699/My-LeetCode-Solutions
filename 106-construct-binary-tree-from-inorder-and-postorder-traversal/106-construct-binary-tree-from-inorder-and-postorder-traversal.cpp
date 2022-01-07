@@ -16,7 +16,7 @@ class Solution {
         
         if(start > end) return NULL;
         
-        TreeNode* root = new TreeNode(postorder[index++]);
+        TreeNode* root = new TreeNode(postorder[index--]); // index++ if we reverse postorder array.
         int rootIndex = m[root->val];
         
         root->right = build(inorder, postorder, rootIndex+1, end, index);
@@ -38,9 +38,13 @@ public:
             m[inorder[i]] = i;
         }
         
-        reverse(postorder.begin(), postorder.end());
-        int index = 0;
+        int index = n-1;
         return build(inorder, postorder, 0, n-1, index);
+        
+        // OR
+        // reverse(postorder.begin(), postorder.end());
+        // int index = 0;
+        // return build(inorder, postorder, 0, n-1, index);
         
     }
 };
