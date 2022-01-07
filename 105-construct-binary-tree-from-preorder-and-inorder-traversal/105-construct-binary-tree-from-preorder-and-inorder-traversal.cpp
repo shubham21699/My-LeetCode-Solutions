@@ -31,9 +31,11 @@ public:
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
         
         int n = preorder.size();
-        TreeNode* result = new TreeNode(preorder[0]);
         
-        if(n == 1) return result;
+        if(n == 1) {
+            TreeNode* result = new TreeNode(preorder[0]);
+            return result;
+        }
         
         for(int i=0 ; i<n ; i++) {
             m[inorder[i]] = i;
