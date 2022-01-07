@@ -1,5 +1,6 @@
 class Solution {
-     int find(string word1, string word2, int n, int m, vector<vector<int> >& dp) {
+public:
+    int find(string word1, string word2, int n, int m, vector<vector<int> >& dp) {
         
         if(n == 0) return m;
         if(m == 0) return n;
@@ -14,7 +15,6 @@ class Solution {
         return dp[n][m];
     }
     
-public:
     int minDistance(string word1, string word2) {
         
         if(word1 == word2) return 0;
