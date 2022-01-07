@@ -24,7 +24,6 @@ class Solution {
         root->right = build(preorder, inorder, rootInd+1, end, index);
         
         return root;
-        
     }
     
 public:
@@ -43,6 +42,5 @@ public:
         
         int index = 0;
         return build(preorder, inorder, 0, n-1, index);
-
     }
 };
