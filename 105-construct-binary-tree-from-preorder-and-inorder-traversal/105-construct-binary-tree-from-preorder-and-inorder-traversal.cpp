@@ -25,22 +25,6 @@ class Solution {
         
         return root;
         
-        
-//         int leftMid = index / 2;
-//         int rightMid = (index + 1 + n) / 2;
-        
-//         if(m[inorder[leftMid]] == false) {
-//             root->left = new TreeNode(inorder[leftMid]);
-//             m[inorder[leftMid]] = true;
-//             build(root->left, preorder, inorder, 0, leftMid);
-//         }
-//         if(m[inorder[rightMid]] == false) {
-//             root->left = new TreeNode(inorder[rightMid]);
-//             m[inorder[rightMid]] = true;
-//             build(root->left, preorder, inorder, index, n);
-//         }
-        
-        
     }
     
 public:
