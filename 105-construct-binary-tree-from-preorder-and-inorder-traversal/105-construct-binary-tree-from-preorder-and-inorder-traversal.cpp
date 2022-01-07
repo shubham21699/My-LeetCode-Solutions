@@ -35,7 +35,6 @@ public:
         
         if(n == 1) return result;
         
-        m.clear();
         for(int i=0 ; i<n ; i++) {
             m[inorder[i]] = i;
         }
