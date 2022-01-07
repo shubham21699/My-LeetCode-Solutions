@@ -23,7 +23,6 @@ class Solution {
         int rootIndex = m[preorder[index]];
         
         root->left = build(preorder, postorder, start, rootIndex, index, size);
-        
         if(rootIndex == end) return root;
         root->right = build(preorder, postorder, rootIndex+1, end-1, index, size);   
         
