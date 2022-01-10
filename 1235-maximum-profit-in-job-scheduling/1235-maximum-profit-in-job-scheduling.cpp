@@ -1,4 +1,5 @@
 class Solution {  
+    
     // Binary Search optimised function to find latest non-overlapping interval
     int latest_non_overlapping_interval(vector<vector<int> >& v, int index) {
         
