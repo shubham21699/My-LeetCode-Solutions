@@ -14,8 +14,9 @@ public:
     double knightProbability(int n, int k, int row, int column) {
         
         if(!isSafe(row, column, n)) return 0;
-        if(dp.count(row) && dp[row].count(column) && dp[row][column].count(k)) return dp[row][column][k];
         if(k == 0) return 1;
+        
+        if(dp.count(row) && dp[row].count(column) && dp[row][column].count(k)) return dp[row][column][k];
         
         double total_possible = knightProbability(n, k-1, row-2, column+1) 
                                 + knightProbability(n, k-1, row-1, column+2) 
