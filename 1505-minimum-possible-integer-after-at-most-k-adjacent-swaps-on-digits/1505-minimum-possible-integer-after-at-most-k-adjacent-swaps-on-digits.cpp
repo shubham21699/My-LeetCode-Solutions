@@ -27,7 +27,7 @@ public:
         
         string result = "";
         
-        while(k > 0) {
+        while(k > 0 && num.length()) {
             
             n = num.length();
             
