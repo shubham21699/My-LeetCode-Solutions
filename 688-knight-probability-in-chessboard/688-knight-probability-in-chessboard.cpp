@@ -33,7 +33,6 @@ public:
         
         
         
-//////////////// OR ////////////////////////////
         vector<vector<vector<double>> > dp(n, vector<vector<double> >(n, vector<double>(k+1, 0)));
         
         for(int i=0 ; i<n ; i++) {
