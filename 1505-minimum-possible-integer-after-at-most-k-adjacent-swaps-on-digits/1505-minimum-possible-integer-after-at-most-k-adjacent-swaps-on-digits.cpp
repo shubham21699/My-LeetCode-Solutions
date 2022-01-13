@@ -52,6 +52,5 @@ public:
         
         result += num;
         return result;
-        
     }
 };
