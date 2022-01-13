@@ -1,14 +1,17 @@
 class Solution {
     bool isSafe(vector<string>& v, int x, int y, int n) {
         
+        // Check if already present above in same column
         for(int row=0 ; row<x ; row++) {
             if(v[row][y] == 'Q') return false;
         }
         
+        // Check if already present above in (x-1, y-1) direction
         for(int row=x-1, col=y-1 ; row>=0 && col>=0 ; row--, col--) {
             if(v[row][col] == 'Q') return false;
         }
         
+        // Check if already present above in (x-1, y+1) direction
         for(int row=x-1, col=y+1 ; row>=0 && col<n ; row--, col++) {
             if(v[row][col] == 'Q') return false;
         }
@@ -41,7 +44,7 @@ public:
         vector<vector<string> > board;
         if(n <= 3) return board;
         
-        vector<string> v;
+        vector<string> v(n);
         
         for(int i=0 ; i<n ; i++) {
             string s = "";
@@ -49,7 +52,7 @@ public:
                 s += '.';
             }
             
-            v.push_back(s);
+            v[i] = s;
         }
         
         solve(board, v, 0, n);
