@@ -31,7 +31,7 @@ public:
             
             n = num.length();
             
-            if(k > n*(n-1)/2) {
+            if(k >= n*(n-1)/2) {
                 sort(num.begin(), num.end());
                 return result + num;
             }
