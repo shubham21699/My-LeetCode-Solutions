@@ -29,7 +29,7 @@ public:
         
         while(k > 0 && num.length()) {
             
-            n = num.length();
+            int n = num.length();
             
             if(k >= n*(n-1)/2) {
                 sort(num.begin(), num.end());
