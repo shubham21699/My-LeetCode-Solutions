@@ -30,7 +30,6 @@ public:
         }
         
         return ans;
-        
     }
     
     int peek() {
@@ -50,7 +49,6 @@ public:
 //         }
         
 //         return ans;
-        
     }
     
     bool empty() {
