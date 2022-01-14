@@ -30,6 +30,10 @@ public:
             if(target < candidates[0]) {
                 return result;
             }
+            if(target == candidates[0]) {
+                result.push_back(candidates);
+                return result;
+            }
         }
         
         vector<int> v;
