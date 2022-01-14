@@ -5,8 +5,8 @@ class Solution {
         if(index >= n || sum > req_sum) return false;
         if(dp[index][sum] != -1) return dp[index][sum];
         
-        return dp[index][sum] = find(nums, sum+nums[index], req_sum, index+1, n, dp) || find(nums, sum, req_sum, index+1, n, dp);
-        // return dp[index][sum];
+        dp[index][sum] = find(nums, sum+nums[index], req_sum, index+1, n, dp) || find(nums, sum, req_sum, index+1, n, dp);
+        return dp[index][sum];
     }
     
 public:
@@ -18,15 +18,7 @@ public:
         for(int i=0 ; i<n ; i++) sum += nums[i];
         
         if(sum % 2 != 0) return false;
-        
-//         int bitsum = nums[0];
-//         for(int i=1 ; i<n ; i++) {
-//             bitsum |= nums[i];
-//         }
-        
-//         if(bitsum) return true;
-//         return false;
-        
+    
         int req_sum = sum/2;
         
         vector<vector<int> > dp(n+1, vector<int>(sum + 1, -1));
