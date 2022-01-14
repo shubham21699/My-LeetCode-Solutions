@@ -1,6 +1,7 @@
 class MyQueue {
     stack<int> s1;
     stack<int> s2;
+    int topEle = 0;
     
 public:
     MyQueue() {
@@ -8,6 +9,7 @@ public:
     }
     
     void push(int x) {
+        if(s1.empty()) topEle = x;
         s1.push(x);
     }
     
@@ -20,6 +22,7 @@ public:
         
         int ans = s2.top();
         s2.pop();
+        topEle = !s2.empty() ? s2.top() : 0;
         
         while(!s2.empty()) {
             s1.push(s2.top());
@@ -31,20 +34,22 @@ public:
     }
     
     int peek() {
+        return topEle;
         
-        while(!s1.empty()) {
-            s2.push(s1.top());
-            s1.pop();
-        }
+///////////////// OR //////////////         
+//         while(!s1.empty()) {
+//             s2.push(s1.top());
+//             s1.pop();
+//         }
         
-        int ans = s2.top();
+//         int ans = s2.top();
         
-        while(!s2.empty()) {
-            s1.push(s2.top());
-            s2.pop();
-        }
+//         while(!s2.empty()) {
+//             s1.push(s2.top());
+//             s2.pop();
+//         }
         
-        return ans;
+//         return ans;
         
     }
     
