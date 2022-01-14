@@ -41,6 +41,5 @@ public:
         int sum = 0;
         find(candidates, target, result, v, 0, n, sum);
         return result;
-        
     }
 };
