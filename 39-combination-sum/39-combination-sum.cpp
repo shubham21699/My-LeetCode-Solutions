@@ -16,7 +16,6 @@ class Solution {
             find(candidates, target, result, v, i, n, sum+candidates[i]);
 
             v.pop_back();
-            
         }
         
     }
