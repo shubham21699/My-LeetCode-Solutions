@@ -6,7 +6,9 @@ class Solution {
         if(dp[index][sum] != -1) return dp[index][sum];
         
         dp[index][sum] = find(nums, sum+nums[index], req_sum, index+1, n, dp) || find(nums, sum, req_sum, index+1, n, dp);
+        
         return dp[index][sum];
+        
     }
     
 public:
