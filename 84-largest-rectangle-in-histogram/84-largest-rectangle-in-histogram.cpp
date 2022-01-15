@@ -25,7 +25,6 @@ public:
             }
             
             s.push(i);
-            
         }
         
         return maxArea;
