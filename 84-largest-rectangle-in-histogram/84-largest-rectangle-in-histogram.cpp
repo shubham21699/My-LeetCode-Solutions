@@ -19,6 +19,7 @@ public:
                 
                 int height = heights[s.top()];
                 s.pop();
+                // Here, i is right index(current index) and s.top() is left index(previous index)
                 int area = height * ( s.empty() ? i : (i - s.top() - 1));
                 maxArea = max(maxArea, area);
                 
