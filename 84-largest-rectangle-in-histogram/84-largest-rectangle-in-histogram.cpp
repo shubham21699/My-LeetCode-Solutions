@@ -11,7 +11,7 @@ public:
         }
         
         stack<int> s;
-        int maxArea = INT_MIN;
+        int maxArea = 0;
         
         for(int i=0 ; i<n ; i++) {
             
