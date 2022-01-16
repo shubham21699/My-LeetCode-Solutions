@@ -15,6 +15,7 @@ public:
                 capacity = 0;
                 result = i+1;
             }
+            
         }
         
         deficit_amount += capacity;
