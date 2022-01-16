@@ -1,36 +1,52 @@
 class Solution {
     int getEleGreaterThanOrEqualToMid(vector<vector<int> >& matrix, int n, int num) {
         
-        int result = 0;
+        int count = 0;
+        int row = 0;
+        int col = n-1; // Start with rightmost column
         
-        for(int i=0 ; i<n ; i++) {
+        for(row=0 ; row<n ; row++) {
             
-            // If num is less than first element, then no more element are 
-            // futher less than or equal or equal to num
-            if(num < matrix[i][0]) return result;
-            
-            // If num is greater than last element, then it is greater than 
-            // all the elements in that row
-            if(num >= matrix[i][n-1]) {
-                result += n;
-                continue;
+            while(col>=0 && matrix[row][col] > num) {
+                col--; // Decrease column untill matrix[row][col] <= num
             }
             
-            // This contain the column index of last element in matrix less than of equal to num
-            int greaterThan = 0;
-            
-            for(int jump=n/2 ; jump>=1 ; jump/=2) {
-                
-                while(greaterThan+jump < n && matrix[i][greaterThan+jump] <= num) {
-                    greaterThan += jump;
-                }
-                
-            }
-            
-            result += greaterThan+1;
+            count += (col+1);
         }
         
-        return result;
+        return count;
+        
+////////////////////// OR: /////////////////////////////////////////
+//         int result = 0;
+        
+//         for(int i=0 ; i<n ; i++) {
+            
+//             // If num is less than first element, then no more element are 
+//             // futher less than or equal or equal to num
+//             if(num < matrix[i][0]) return result;
+            
+//             // If num is greater than last element, then it is greater than 
+//             // all the elements in that row
+//             if(num >= matrix[i][n-1]) {
+//                 result += n;
+//                 continue;
+//             }
+            
+//             // This contain the column index of last element in matrix less than of equal to num
+//             int greaterThan = 0;
+            
+//             for(int jump=n/2 ; jump>=1 ; jump/=2) {
+                
+//                 while(greaterThan+jump < n && matrix[i][greaterThan+jump] <= num) {
+//                     greaterThan += jump;
+//                 }
+                
+//             }
+            
+//             result += greaterThan+1;
+//         }
+        
+//         return result;
     }
     
 public:
