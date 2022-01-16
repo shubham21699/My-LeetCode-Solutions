@@ -15,12 +15,9 @@ public:
         
         for(int i=0 ; i<n ; i++) {
             for(int j=0 ; j<m ; j++) {
-                // if(grid[i][j] == 1 && (grid[i+1][j] == 0) && (grid[i][j+1] == 0) && (grid[i-1][j] == 0) && grid[i][j-1] == 0) return -1;
                 if(grid[i][j] == 2) q.push({ i, j });
             }
         }
-        
-        // if(q.size() == 0) return 0;
         
         int time = 0;
         
