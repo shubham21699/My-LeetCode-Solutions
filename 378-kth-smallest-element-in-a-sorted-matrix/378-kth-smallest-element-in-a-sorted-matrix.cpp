@@ -12,9 +12,7 @@ public:
     
         priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp) > pq(cmp);
         
-        for(int i=0 ; i<n ; i++) {
-            pq.push({ i, 0 });
-        }
+        for(int i=0 ; i<n ; i++) pq.push({ i, 0 });
         
         while(k > 1) {
             
