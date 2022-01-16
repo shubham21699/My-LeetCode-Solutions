@@ -11,7 +11,7 @@ class Solution {
                 col--; // Decrease column untill matrix[row][col] <= num
             }
             
-            count += (col+1);
+            count += (col + 1);
         }
         
         return count;
