@@ -7,14 +7,14 @@ public:
         
         for(int i=0 ; i<n ; i++) pq.push(nums[i]);
         
-        for(int i=0 ; i<n && !pq.empty() ; i++) {
+        for(int i=0 ; i<n ; i++) {
             nums[i] = pq.top();
             pq.pop();
         }
         
         return nums;
         
-        // OR
+        // OR:
         // sort(nums.begin(), nums.end());
         // return nums;
     }
