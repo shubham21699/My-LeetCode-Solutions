@@ -5,19 +5,19 @@ public:
         int n = gas.size();
         int capacity = 0;
         int result = 0;
-        int total = 0;
+        int deficit_amount = 0;
         
         for(int i=0 ; i<n ; i++) {
             capacity += (gas[i] - cost[i]);
             if(capacity < 0) {
-                total += capacity;
+                deficit_amount += capacity;
                 capacity = 0;
                 result = i+1;
             }
         }
         
-        total += capacity;
+        deficit_amount += capacity;
         
-        return total<0 ? -1 : result;
+        return deficit_amount<0 ? -1 : result;
     }
 };
