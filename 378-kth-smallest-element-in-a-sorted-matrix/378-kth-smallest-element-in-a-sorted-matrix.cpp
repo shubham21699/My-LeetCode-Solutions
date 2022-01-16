@@ -18,6 +18,7 @@ class Solution {
             
             // This contain the column index of last element in matrix less than of equal to num
             int greaterThan = 0;
+            
             for(int jump=n/2 ; jump>=1 ; jump/=2) {
                 
                 while(greaterThan+jump < n && matrix[i][greaterThan+jump] <= num) {
@@ -57,7 +58,6 @@ public:
         
         return left;
 
-    
         
 //         OR: Using Heap Sort
 //         priority_queue<int, vector<int>, greater<int> > pq;
