@@ -20,6 +20,5 @@ public:
         deficit_amount += capacity;
         
         return deficit_amount<0 ? -1 : result;
-        
     }
 };
