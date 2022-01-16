@@ -38,11 +38,13 @@ public:
         }
         
         for(int i=n-1 ; i>0 ; i--) {
+            
             // Move current root to end
             swap(nums[0], nums[i]);
             
             // Calling max-heapify on reduced heap
             heapify(nums, i, 0);
+            
         }
         
         return nums;
