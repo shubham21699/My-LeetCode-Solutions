@@ -1,6 +1,9 @@
 class MedianFinder {
-    priority_queue<int> p; // max-Heap
-    priority_queue<int, vector<int>, greater<int> > q; // Min-Heap
+    // max-Heap: will store half of low numbers, top of max-heap will be highest among low numbers
+    priority_queue<int> p; 
+    
+    // Min-Heap: will store half of high numbers, top of min-heap will be lowest number among high numbers
+    priority_queue<int, vector<int>, greater<int> > q; 
     
 public:
     MedianFinder() {
@@ -20,6 +23,7 @@ public:
     
     double findMedian() {
         if(p.size() > q.size()) return p.top();
+        
         return (p.top() + q.top()) / 2.0;
     }
 };
