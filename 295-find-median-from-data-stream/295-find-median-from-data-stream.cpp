@@ -25,6 +25,7 @@ public:
     
     double findMedian() {
         if(p.size() > q.size()) return p.top();
+        
         return (p.top() + q.top()) / 2.0;
     }
 };
