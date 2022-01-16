@@ -57,6 +57,7 @@ public:
             }
             
             if(flag == true) time++;
+            
         }
         
         for(int i=0 ; i<n ; i++) {
