@@ -5,6 +5,12 @@ public:
         int n = grid.size();
         int m = grid[0].size();
         
+        if(n == 1 && m == 1) {
+            if(grid[0][0] == 0) return 0;
+            if(grid[0][0] == 1) return -1;
+            if(grid[0][0] == 2) return 0;
+        }
+        
         queue<pair<int, int> > q;
         
         for(int i=0 ; i<n ; i++) {
