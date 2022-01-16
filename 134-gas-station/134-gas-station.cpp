@@ -8,7 +8,6 @@ public:
         int deficit_amount = 0;
         
         for(int i=0 ; i<n ; i++) {
-            
             capacity += (gas[i] - cost[i]);
             
             if(capacity < 0) {
@@ -16,7 +15,6 @@ public:
                 capacity = 0;
                 start_point = i+1;
             }
-            
         }
         
         deficit_amount += capacity;
