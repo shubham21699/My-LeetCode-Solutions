@@ -18,10 +18,12 @@ class Solution {
         
         // If largest is not the root of current subtree
         if(largest != index) {
+            
             swap(nums[index], nums[largest]);
             
             // Recursively heapify the affected subtree
             heapify(nums, n, largest);
+            
         }
         
     }
