@@ -5,9 +5,7 @@ public:
         int n = nums.size();
         priority_queue<int> pq;
         
-        for(int i=0 ; i<n ; i++) {
-            pq.push(nums[i]);
-        }
+        for(int i=0 ; i<n ; i++) pq.push(nums[i]);
         
         while(k > 1) {
             pq.pop();
