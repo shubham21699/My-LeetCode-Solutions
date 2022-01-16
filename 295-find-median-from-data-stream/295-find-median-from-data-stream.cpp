@@ -11,6 +11,7 @@ public:
     }
     
     void addNum(int num) {
+        
         p.push(num);
         q.push(p.top());
         p.pop();
@@ -19,6 +20,7 @@ public:
             p.push(q.top());
             q.pop();
         }
+        
     }
     
     double findMedian() {
