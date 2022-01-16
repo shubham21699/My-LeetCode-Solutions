@@ -3,8 +3,8 @@ class Solution {
     void heapify(vector<int>& nums, int n, int index) {
         
         int largest = index; // Initialize largest as root
-        int left_child = 2*index + 1; // Left child of root node
-        int right_child = 2*index + 2; // Right child of root node
+        int left_child = 2 * index + 1; // Left child of root node
+        int right_child = 2 * index + 2; // Right child of root node
         
         // If left child is larger than root
         if(left_child < n && nums[left_child] > nums[largest]) {
