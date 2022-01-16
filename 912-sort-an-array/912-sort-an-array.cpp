@@ -30,7 +30,7 @@ public:
     vector<int> sortArray(vector<int>& nums) {
         
         int n = nums.size();
-        // Using Heap Sort:
+        // Using Heap Sort:-
         
         // Build heap by rearranging elements
         for(int i=n/2-1 ; i>=0 ; i--) {
@@ -48,7 +48,7 @@ public:
         return nums;
         
         
-///////////// OR: Using Priority Queue ////////////
+//////////////// OR: Using Priority Queue ////////////
 //         priority_queue<int, vector<int>, greater<int> > pq;
         
 //         for(int i=0 ; i<n ; i++) {
