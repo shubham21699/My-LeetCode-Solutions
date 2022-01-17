@@ -1,11 +1,13 @@
 class Solution {
-    unordered_set<int> s; // Will store all the nodes of cycle
+    vector<bool> cycle; // Will store all the nodes of cycle
     int cycleStart = -1; // Marke the start node of cycle
+    bool found = false;
     
     void isCycle(int v, vector<bool>& visited, int parent, vector<vector<int> > graph) {
      
         if(visited[v]) { // If reached already visited node, means its in cycle amd mark as start of cycle
             cycleStart = v;
+            found = true;
             return;
         }
         
@@ -18,10 +20,10 @@ class Solution {
             if(node == parent) continue;
             
             // If cycle not yet detected, explore graph further
-            if(s.empty()) isCycle(node, visited, v, graph);
+            if(!found) isCycle(node, visited, v, graph);
             
             // If cycle is detected, keep pushing nodes untill we reach the start of cycle
-            if(cycleStart != -1) s.insert(v);
+            if(cycleStart != -1) cycle[v] = true;
             
             // If all the nodes of cycle are taken, then just returns
             if(v == cycleStart) {
@@ -39,6 +41,8 @@ public:
         int n = edges.size();
         vector<vector<int> > graph(n+1);
         vector<bool> visited(n+1, false);
+        cycle.resize(n+1, false);
+        found = false;
         
         // Constructing graph
         for(int i=0 ; i<n ; i++) {
@@ -50,7 +54,7 @@ public:
         
         for(int i=n-1 ; i>=0 ; i--) {
             // Last edge of input present in the cycle
-            if(s.count(edges[i][0]) >= 1 && s.count(edges[i][1]) >= 1) return edges[i];
+            if(cycle[edges[i][0]] == true && cycle[edges[i][1]] == true) return edges[i];
         }
         
         return {}; // If unreachable
