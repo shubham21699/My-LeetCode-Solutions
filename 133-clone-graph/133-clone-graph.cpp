@@ -27,7 +27,7 @@ public:
         
         if(!node) return NULL;
         
-        // DFS
+        // DFS:
         if(newGraph.find(node) == newGraph.end()) {
             
             newGraph[node] = new Node(node->val, {});
