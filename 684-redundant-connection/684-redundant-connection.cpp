@@ -28,6 +28,7 @@ class Solution {
                 cycleStart = -1;
                 return;
             }
+            
         }
         
     }
