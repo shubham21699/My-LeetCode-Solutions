@@ -19,6 +19,7 @@ public:
             pq.pop();
             
             for(auto node : graph[current_node]) {
+                
                 int target_node = node.first;
                 int target_node_time = node.second;
                 
@@ -27,6 +28,7 @@ public:
                     time[target_node] = time[current_node] + target_node_time;
                     pq.push({ time[target_node], target_node });
                 }
+                
             }
             
         }
