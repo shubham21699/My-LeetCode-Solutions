@@ -38,7 +38,6 @@ public:
             
         }
         
-        return newGraph[node];
-        
+        return newGraph[node];   
     }
 };
