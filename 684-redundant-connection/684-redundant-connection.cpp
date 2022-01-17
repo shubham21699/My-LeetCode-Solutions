@@ -3,7 +3,7 @@ class Solution {
     int cycleStart = -1; // Marke the start node of cycle
     bool found = false;
     
-    void isCycle(int v, vector<bool>& visited, int parent, vector<vector<int> > graph) {
+    void isCycle(int v, vector<bool>& visited, int parent, vector<int> graph[]) {
      
         if(visited[v]) { // If reached already visited node, means its in cycle amd mark as start of cycle
             cycleStart = v;
@@ -39,7 +39,7 @@ public:
     vector<int> findRedundantConnection(vector<vector<int>>& edges) {
         
         int n = edges.size();
-        vector<vector<int> > graph(n+1);
+        vector<int> graph[n+1];
         vector<bool> visited(n+1, false);
         cycle.resize(n+1, false);
         found = false;
