@@ -21,6 +21,7 @@ public:
             m[4] = 1;
             
             for(auto node : graph[current_node]) {
+                
                 if(result[node-1] == 1) {
                     m[1] = 0;
                 }
@@ -33,6 +34,7 @@ public:
                 else if(result[node-1] == 4) {
                     m[4] = 0;
                 }
+                
             }
             
             if(m[1] == 1) result[current_node-1] = 1;
