@@ -56,9 +56,9 @@ public:
         for(int i=0 ; i<n ; i++) {
             for(int j=0 ; j<m ; j++) {
                 if(grid[i][j] == '1' && !visited[i][j]) {
-                    BFS(grid, visited, i, j, n, m);
+                    DFS(grid, visited, i, j, n, m);
                     // OR:
-                    // DFS(grid, visited, i, j, n, m);
+                    // BFS(grid, visited, i, j, n, m); // This BFS will take more memory
                     count++;
                 }
             }
