@@ -3,9 +3,7 @@ public:
     vector<int> gardenNoAdj(int n, vector<vector<int>>& paths) {
         
         vector<int> result(n, 0);
-        
         vector<int> graph[n+1];
-        vector<bool> visited(n+1, false);
         
         for(int i=0 ; i<paths.size() ; i++) {
             graph[paths[i][0]].push_back(paths[i][1]);
@@ -16,7 +14,6 @@ public:
         
         for(int current_node=2 ; current_node<=n ; current_node++) {
             
-            visited[current_node] = true;
             unordered_map<int, int> m;
             m[1] = 1;
             m[2] = 1;
