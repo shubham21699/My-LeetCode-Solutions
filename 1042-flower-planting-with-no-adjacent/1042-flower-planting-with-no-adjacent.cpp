@@ -24,13 +24,13 @@ public:
                 if(result[node-1] == 1) {
                     m[1] = 0;
                 }
-                if(result[node-1] == 2) {
+                else if(result[node-1] == 2) {
                     m[2] = 0;
                 }
-                if(result[node-1] == 3) {
+                else if(result[node-1] == 3) {
                     m[3] = 0;
                 }
-                if(result[node-1] == 4) {
+                else if(result[node-1] == 4) {
                     m[4] = 0;
                 }
             }
