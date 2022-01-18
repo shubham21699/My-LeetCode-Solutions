@@ -43,6 +43,5 @@ public:
         }
         
         return result;
-        
     }
 };
