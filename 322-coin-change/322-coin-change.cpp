@@ -5,8 +5,8 @@ class Solution {
         if(index < 0) return INT_MAX-1;
         if(dp[amount][index] != -1) return dp[amount][index];
         
-        if(coins[index] <= amount) dp[amount][index] = min(1 + find(coins, amount-coins[index], index, dp), 0 + find(coins, amount, index-1, dp));
-        else dp[amount][index] = 0 + find(coins, amount, index-1, dp);
+        if(coins[index] <= amount) dp[amount][index] = min(1 + find(coins, amount-coins[index], index, dp), find(coins, amount, index-1, dp));
+        else dp[amount][index] = find(coins, amount, index-1, dp);
         
         return dp[amount][index];
     }
