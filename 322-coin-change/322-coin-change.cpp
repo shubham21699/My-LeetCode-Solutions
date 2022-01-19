@@ -21,7 +21,7 @@ public:
         if(n == 1 && coins[0] > amount) return -1;
         
         sort(coins.begin(), coins.end());
-        vector<vector<int> > dp(10000+1, vector<int>(12+1, -1));
+        vector<vector<int> > dp(amount+1, vector<int>(n+1, -1));
         
         int result = find(coins, amount, n-1, dp);
         return result == INT_MAX-1 ? -1 : result;
