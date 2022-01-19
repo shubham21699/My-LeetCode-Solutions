@@ -20,9 +20,21 @@ public:
         if(n == 1 && coins[0] == amount) return 1;
         if(n == 1 && coins[0] > amount) return -1;
         
-        vector<vector<int> > dp(amount+1, vector<int>(n+1, -1));
+        vector<int> dp(amount+1, INT_MAX-1);
+        dp[0] = 0;
         
-        int result = find(coins, amount, n-1, dp);
-        return result == INT_MAX-1 ? -1 : result;
+        for(int i=0 ; i<n ; i++) {
+            for(int j=coins[i] ; j<=amount ; j++) {
+                dp[j] = min(dp[j], 1 + dp[j-coins[i]]);
+            }
+        }
+        
+        return dp[amount] == INT_MAX-1 ? -1 : dp[amount];
+        
+//         OR:
+//         vector<vector<int> > dp(amount+1, vector<int>(n+1, -1));
+        
+//         int result = find(coins, amount, n-1, dp);
+//         return result == INT_MAX-1 ? -1 : result;
     }
 };
