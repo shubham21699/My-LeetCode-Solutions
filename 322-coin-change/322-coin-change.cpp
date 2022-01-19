@@ -31,7 +31,8 @@ public:
         
         return dp[amount] == INT_MAX-1 ? -1 : dp[amount];
         
-//         OR:
+        
+//////////////////// OR: ///////////////////////////
 //         vector<vector<int> > dp(amount+1, vector<int>(n+1, -1));
         
 //         int result = find(coins, amount, n-1, dp);
