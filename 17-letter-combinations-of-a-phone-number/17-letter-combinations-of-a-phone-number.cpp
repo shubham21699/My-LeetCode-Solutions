@@ -22,7 +22,7 @@ class Solution {
         string x = m[digits[index]];
         
         for(int i=0 ; i<x.length() ; i++) {
-            s += x[i];
+            s.push_back(x[i]);
             find(digits, s, result, index+1, n);
             s.pop_back();
         }
