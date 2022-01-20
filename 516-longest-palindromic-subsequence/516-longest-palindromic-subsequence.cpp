@@ -9,7 +9,6 @@ class Solution {
         else dp[i][j] = max(find(s, i+1, j, dp), find(s, i, j-1, dp));
         
         return dp[i][j];
-        
     }
     
 public:
@@ -25,6 +24,5 @@ public:
         
         vector<vector<int> > dp(n, vector<int>(n, 0));
         return find(s, 0, n-1, dp);
-        
     }
 };
