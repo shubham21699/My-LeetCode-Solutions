@@ -23,7 +23,7 @@ public:
             return 1;
         }
         
-        vector<vector<int> > dp(n+1, vector<int>(n+1, 0));
+        vector<vector<int> > dp(n, vector<int>(n, 0));
         return find(s, 0, n-1, dp);
         
     }
