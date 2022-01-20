@@ -47,6 +47,7 @@ public:
         
         string s = "";
         find(digits, s, result, 0, n);
+        
         return result;
     }
 };
