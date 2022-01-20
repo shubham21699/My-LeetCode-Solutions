@@ -15,6 +15,7 @@ public:
     int longestPalindromeSubseq(string s) {
         
         int n = s.length();
+        
         if(n == 1) return 1;
         if(n == 2) {
             if(s[0] == s[1]) return 2;
