@@ -55,10 +55,8 @@ public:
                 j--;
             }
             
-            v.clear();
         }
         
         return true;
-        
     }
 };
