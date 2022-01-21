@@ -14,6 +14,7 @@ public:
             if(s.find(i) == s.end()) result.push_back(i);
         }
         
+        s.clear();
         return result;
     }
 };
