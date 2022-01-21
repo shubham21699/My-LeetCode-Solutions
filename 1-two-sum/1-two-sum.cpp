@@ -6,19 +6,14 @@ public:
         vector<int> result(2);
         
         unordered_map<int, int> m;
-        unordered_map<int, int> mi;
         for(int i=0 ; i<n ; i++) {
-            m[nums[i]]++;
-            mi[nums[i]] = i;
-        }
-        
-        for(int i=0 ; i<n ; i++) {
-            m[nums[i]]--;
-            if(m[target-nums[i]] > 0) {
+            if(m.find(target-nums[i]) != m.end()) {
                 result[0] = i;
-                result[1] = mi[target-nums[i]];
+                result[1] = m[target-nums[i]];
                 break;
             }
+            
+            m[nums[i]] = i;
         }
         
         return result;
