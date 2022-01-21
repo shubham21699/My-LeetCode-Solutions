@@ -1,5 +1,5 @@
 class MinStack {
-    deque<pair<int, int> > d;
+    stack<pair<int, int> > s;
     
 public:
     MinStack() {
@@ -10,22 +10,22 @@ public:
         
         int mini;
         
-        if(d.empty()) mini = val;
-        else mini = min(val, d.back().second);
+        if(s.empty()) mini = val;
+        else mini = min(val, s.top().second);
         
-        d.push_back({ val, mini });
+        s.push({ val, mini });
     }
     
     void pop() {
-        d.pop_back();
+        s.pop();
     }
     
     int top() {
-        return d.back().first;
+        return s.top().first;
     }
     
     int getMin() {
-        return d.back().second;
+        return s.top().second;
     }
 };
 
