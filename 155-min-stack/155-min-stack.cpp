@@ -7,14 +7,12 @@ public:
     }
     
     void push(int val) {
-        
         int mini;
         
         if(s.empty()) mini = val;
         else mini = min(val, s.top().second);
         
         s.push({ val, mini });
-        
     }
     
     void pop() {
