@@ -7,6 +7,7 @@ public:
         int i = 0;
         
         while(i < n) {
+            
             m[nums[i]]++;
             if(m[nums[i]] > floor(n/2)) break;
             
