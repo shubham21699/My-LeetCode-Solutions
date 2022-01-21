@@ -20,12 +20,10 @@ public:
         
         // Else make changes
         for(int j=0 ; j<n ; j++) {
-            
             if(nums[j] != 0 && i<j) {
                 swap(nums[i], nums[j]);
                 i++;
             }
-
         }
         
     }
