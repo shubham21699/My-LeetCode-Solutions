@@ -1,5 +1,5 @@
 class MinStack {
-    deque<int> d;
+    deque<pair<int, int> > d;
     
 public:
     MinStack() {
@@ -7,7 +7,13 @@ public:
     }
     
     void push(int val) {
-        d.push_back(val);
+        
+        int mini;
+        
+        if(d.empty()) mini = val;
+        else mini = min(val, d.back().second);
+        
+        d.push_back({ val, mini });
     }
     
     void pop() {
@@ -15,18 +21,11 @@ public:
     }
     
     int top() {
-        return d.back();
+        return d.back().first;
     }
     
     int getMin() {
-        
-        int ans = INT_MAX;
-        
-        for(auto it=d.begin() ; it!=d.end() ; it++) {
-            ans = min(ans, *it);
-        }
-        
-        return ans;
+        return d.back().second;
     }
 };
 
