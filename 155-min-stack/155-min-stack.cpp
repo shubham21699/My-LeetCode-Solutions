@@ -19,7 +19,6 @@ public:
     }
     
     int getMin() {
-        
         int ans = INT_MAX;
         
         for(auto it=d.begin() ; it!=d.end() ; it++) {
@@ -27,7 +26,6 @@ public:
         }
         
         return ans;
-        
     }
 };
 
