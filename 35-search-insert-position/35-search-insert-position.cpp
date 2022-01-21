@@ -12,7 +12,6 @@ class Solution {
         }
         
         return start;
-        
     }
     
 public:
@@ -26,6 +25,5 @@ public:
         }
         
         return binarySearch(nums, target, 0, n-1);
-        
     }
 };
