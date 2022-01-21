@@ -38,5 +38,6 @@ public:
         else if(list2) temp->next = list2;
         
         return result->next;
+        
     }
 };
