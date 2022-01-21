@@ -14,6 +14,7 @@ public:
         else mini = min(val, s.top().second);
         
         s.push({ val, mini });
+        
     }
     
     void pop() {
