@@ -46,7 +46,7 @@ public:
             temp = temp->next;
         }
         
-        while(!s.empty()) {
+        while(!s.empty() && head) {
             if(head->val != s.top()->val) return false;
             head = head->next;
             s.pop();
@@ -55,7 +55,7 @@ public:
         return true;
         
         
-//         OR: Too Slow and heavy memory usage 
+//         OR: Too Slow
 //         ListNode* temp = head;
 //         temp = clone(temp);
 //         ListNode* revList = reverse(temp);
