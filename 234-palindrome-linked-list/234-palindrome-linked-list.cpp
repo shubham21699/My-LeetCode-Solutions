@@ -46,7 +46,7 @@ public:
             temp = temp->next;
         }
         
-        while(!s.empty() && head) {
+        while(!s.empty()) {
             if(head->val != s.top()->val) return false;
             head = head->next;
             s.pop();
