@@ -55,7 +55,7 @@ public:
         return true;
         
         
-//         OR: Too Slow
+//         OR:
 //         ListNode* temp = head;
 //         temp = clone(temp);
 //         ListNode* revList = reverse(temp);
