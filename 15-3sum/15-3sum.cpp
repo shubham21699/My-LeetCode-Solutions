@@ -29,8 +29,8 @@ public:
                 if(x == 0) {
                     result.push_back({ nums[i], nums[j], nums[k] });
                     
-                    while(j+1 < k && nums[j] == nums[j+1]) j++;
-                    while(k-1 > j && nums[k] == nums[k-1]) k--;
+                    while(j < k && nums[j] == nums[j+1]) j++;
+                    while(k > j && nums[k] == nums[k-1]) k--;
                     j++;
                     k--;
                     
