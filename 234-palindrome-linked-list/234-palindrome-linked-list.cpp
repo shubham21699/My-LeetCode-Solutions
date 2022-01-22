@@ -38,16 +38,33 @@ public:
         
         if(!head || !head->next) return true;
         
+        stack<ListNode* > s;
         ListNode* temp = head;
-        temp = clone(temp);
-        ListNode* revList = reverse(temp);
         
-        while(head && revList) {
-            if(head->val != revList->val) return false;
+        while(temp) {
+            s.push(temp);
+            temp = temp->next;
+        }
+        
+        while(!s.empty()) {
+            if(head->val != s.top()->val) return false;
             head = head->next;
-            revList = revList->next;
+            s.pop();
         }
         
         return true;
+        
+//         OR: Too Slow and heavy memory usage 
+//         ListNode* temp = head;
+//         temp = clone(temp);
+//         ListNode* revList = reverse(temp);
+        
+//         while(head && revList) {
+//             if(head->val != revList->val) return false;
+//             head = head->next;
+//             revList = revList->next;
+//         }
+        
+//         return true;
     }
 };
