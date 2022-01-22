@@ -29,9 +29,9 @@ public:
             for(int j=i-1 ; j>=0 ; j--) {
                 
                 // i-j == 1 account for palindrome with length 2
-                if(s[i] == s[j] && (i-j == 1 || dp[i-1][j+1])) {
+                if(s[i] == s[j] && (i-j == 1 || dp[j+1][i-1])) {
                     
-                    dp[i][j] = true;
+                    dp[j][i] = true;
                     int distance = i-j+1;
                     
                     if(maxLen < distance) {
@@ -41,7 +41,7 @@ public:
                     
                 }
                 
-                else dp[i][j] = false;
+                else dp[j][i] = false;
                 
             }
             
