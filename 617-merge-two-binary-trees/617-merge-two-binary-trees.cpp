@@ -31,6 +31,5 @@ public:
         else result->right = NULL;
         
         return result;
-        
     }
 };
