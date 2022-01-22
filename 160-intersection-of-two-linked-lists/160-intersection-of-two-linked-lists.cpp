@@ -27,7 +27,6 @@ public:
         }
         
         int diff = abs(n1 - n2);
-        
         t1 = headA;
         t2 = headB;
         
