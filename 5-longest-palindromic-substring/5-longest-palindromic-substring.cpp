@@ -23,11 +23,9 @@ public:
         int maxLen = 1;
         
         for(int i=0 ; i<n ; i++) {
-            
             dp[i][i] = true;
             
             for(int j=i-1 ; j>=0 ; j--) {
-                
                 // i-j == 1 account for palindrome with length 2
                 if(s[i] == s[j] && (i-j == 1 || dp[j+1][i-1])) {
                     
@@ -40,11 +38,8 @@ public:
                     }
                     
                 }
-                
                 else dp[j][i] = false;
-                
             }
-            
         }
         
         return s.substr(start, maxLen);
