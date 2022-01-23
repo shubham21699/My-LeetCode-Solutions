@@ -36,7 +36,6 @@ public:
         if(temp->next->next) temp->next = temp->next->next;
         else temp->next = NULL;
         
-        return head;
-        
+        return head;  
     }
 };
