@@ -10,7 +10,7 @@ public:
 ///////////////  Greedy Approach  ////////////////
         int steps = 0;
         int start = 0;
-        int end =0 ;
+        int end = 0;
         
         while(end < n-1) {
             
