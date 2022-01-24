@@ -24,9 +24,11 @@ public:
             
             start = end+1;
             end = maxEnd;
+            
         }
         
         return steps;
+        
         
 ///////////////  OR: DP Approach  ////////////////////
 //         vector<int> jumps(n, INT_MAX);
