@@ -33,6 +33,7 @@ public:
         }
         
         find_next_permute(result, nums, 0, n);
+        
         return result;
     }
 };
