@@ -10,7 +10,6 @@ class Solution {
         
         board[i][j] = word[index]; // Replace it back to its original value
         return result;
-        
     }
     
 public:
