@@ -26,7 +26,7 @@ public:
         slow->next = NULL;
         ListNode* left = sortList(head);
         
-        // Create New List
+        // Create new list final list to be returned
         ListNode* result = new ListNode();
         ListNode* temp = result;
         
@@ -65,5 +65,6 @@ public:
 //         }
         
 //         return head;
+        
     }
 };
