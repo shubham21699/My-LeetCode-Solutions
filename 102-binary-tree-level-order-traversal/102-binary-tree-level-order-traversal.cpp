@@ -41,7 +41,6 @@ public:
             }
             
             result.push_back(v);
-            
         }
         
         return result;
