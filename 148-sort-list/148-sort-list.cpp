@@ -26,7 +26,7 @@ public:
         slow->next = NULL;
         ListNode* left = sortList(head);
         
-        // Create new list final list to be returned
+        // Create final list to be returned
         ListNode* result = new ListNode();
         ListNode* temp = result;
         
@@ -46,7 +46,6 @@ public:
         else temp->next = right;
         
         return result->next;
-        
         
 //         OR:
 //         priority_queue<int, vector<int>, greater<int> > pq;
