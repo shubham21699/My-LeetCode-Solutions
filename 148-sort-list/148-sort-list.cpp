@@ -31,6 +31,7 @@ public:
         ListNode* temp = result;
         
         while(left && right) {
+            
             if(left->val < right->val) {
                 temp->next = left;
                 left = left->next;
@@ -39,13 +40,16 @@ public:
                 temp->next = right;
                 right = right->next;
             }
+            
             temp = temp->next;
+            
         }
         
         if(left) temp->next = left;
         else temp->next = right;
         
         return result->next;
+        
         
 //         OR:
 //         priority_queue<int, vector<int>, greater<int> > pq;
@@ -64,6 +68,5 @@ public:
 //         }
         
 //         return head;
-        
     }
 };
