@@ -15,11 +15,11 @@ public:
             
             mini = min(nums[i], mini*nums[i]);
             maxi = max(nums[i], maxi*nums[i]);
-            
             result = max(result, maxi);
             
         }
         
         return result;
+        
     }
 };
