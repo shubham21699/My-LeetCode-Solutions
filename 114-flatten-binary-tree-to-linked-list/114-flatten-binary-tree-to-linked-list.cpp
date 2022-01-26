@@ -20,6 +20,7 @@ public:
         while(temp) {
             
             if(temp->left) {
+                
                 if(temp->left->right) {
                     TreeNode* current = temp->left;
                     while(current->right) current = current->right;
@@ -32,6 +33,7 @@ public:
                     temp->right = temp->left;
                     temp->left = NULL;
                 }
+                
             }
             
             temp = temp->right;
