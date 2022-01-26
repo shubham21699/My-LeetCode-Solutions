@@ -14,7 +14,6 @@ public:
     vector<vector<int>> levelOrder(TreeNode* root) {
         
         vector<vector<int> > result;
-        
         if(!root) return result;
         if(!root->left && !root->right) {
             result.push_back({ root->val });
@@ -44,6 +43,5 @@ public:
         }
         
         return result;
-        
     }
 };
