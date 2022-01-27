@@ -6,6 +6,7 @@ public:
         int ans = 0, mask = 0;
         
         for(int i=31 ; i>=0 ; i--) {
+            
             mask = mask | (1 << i);
             int greedyAns = (ans | (1 << i));
             
@@ -17,10 +18,12 @@ public:
             }
             
             for(auto prefix : s) {
+                
                 if(s.find(greedyAns xor prefix) != s.end()) {
                     ans = greedyAns;
                     break;
                 }
+                
             }
             
         }
