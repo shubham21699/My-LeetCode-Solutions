@@ -12,12 +12,12 @@ public:
             
             // Check if possible
             unordered_set<int> s;
-            for(auto num : nums) {
+            for(auto &num : nums) {
                 // We basically insert with first i bits conserved and the rest of the bits are 0 after 1
                 s.insert(num & mask);
             }
             
-            for(auto prefix : s) {
+            for(auto &prefix : s) {
                 
                 if(s.find(greedyAns xor prefix) != s.end()) {
                     ans = greedyAns;
