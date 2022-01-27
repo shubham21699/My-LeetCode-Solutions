@@ -18,7 +18,7 @@ public:
             if(indegree[i] == 0) q.push(i);
         }
         
-        int count = 0;
+        int count = 0; // Counts number of unique non-repeating courses
     
         while(!q.empty()) {
             
@@ -36,5 +36,6 @@ public:
         
         if(count == numCourses) return true; 
         return false; // Means Cycle Exists
+        
     }
 };
