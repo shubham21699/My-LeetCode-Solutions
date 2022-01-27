@@ -13,20 +13,17 @@ public:
         if(count0 > 1) return result;
         
         int product = 1;
-        
         for(int i=0 ; i<n ; i++) {
             if(nums[i] == 0) continue;
             product *= nums[i];
         }
         
         for(int i=0 ; i<n ; i++) {
-            
             if(count0 == 1) {
                 if(nums[i] == 0) result[i] = product;
                 else result[i] = 0;
             }
             else result[i] = product / nums[i];
-            
         }
         
         return result;
