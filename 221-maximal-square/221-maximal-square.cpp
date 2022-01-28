@@ -50,5 +50,6 @@ public:
         }
         
         return result*result;
+        
     }
 };
