@@ -10,8 +10,9 @@ public:
             nums[index] = -1 * nums[index];
             
             // After multiplying with -1, a duplicate number gets to its original +ve value 
-            // after its 2nd appearance and when that appears return that duplicate value.
+            // after its 2nd appearance and when that appears return absolute of that duplicate value.
             if(nums[index] > 0) return abs(nums[i]);
+            
         }
         
         return -1;
