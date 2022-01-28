@@ -5,8 +5,8 @@ public:
         int n = nums.size()-1;
         
         for(int i=0 ; i<=n ; i++) {
-            int index = abs(nums[i]);
             
+            int index = abs(nums[i]);
             nums[index] = -1 * nums[index];
             
             // After multiplying with -1, a duplicate number gets to its original +ve value 
