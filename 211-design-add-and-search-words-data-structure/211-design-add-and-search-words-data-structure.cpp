@@ -50,7 +50,9 @@ public:
     }
     
     bool search(string word) {
+        
         return search(word.c_str(), root);
+        
     }
 };
 
