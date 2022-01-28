@@ -32,7 +32,6 @@ public:
         vector<TreeNode* > vp, vq;
         pathToTarget(root, vp, p);
         pathToTarget(root, vq, q);
-        
         unordered_set<TreeNode* > st;
         for(int i=0 ; i<vp.size() ; i++) st.insert(vp[i]);
         
