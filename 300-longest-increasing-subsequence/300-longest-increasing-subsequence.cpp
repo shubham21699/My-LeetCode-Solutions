@@ -10,7 +10,8 @@ class Solution {
         if(prev_index == -1 || nums[prev_index] < nums[index]) 
             taken = 1 + find(nums, index+1, n, index, dp);
         
-        return dp[prev_index+1] = max(taken, notTaken);
+        dp[prev_index+1] = max(taken, notTaken);
+        return dp[prev_index+1];
     }
     
 public:
