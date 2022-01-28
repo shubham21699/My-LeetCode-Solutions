@@ -11,7 +11,7 @@ public:
 class WordDictionary {
     TrieNode* root = new TrieNode();
     
-    bool search(const char* word, TrieNode* node) {
+    bool Search(const char* word, TrieNode* node) {
         
         for(int i=0 ; word[i] && node ; i++) {
             if(word[i] != '.') {
@@ -21,7 +21,7 @@ class WordDictionary {
                 TrieNode* temp = node;
                 for(int j=0 ; j<26 ; j++) {
                     node = temp->children[j];
-                    if(search(word + i + 1, node)) return true;
+                    if(Search(word + i + 1, node)) return true;
                 }
             }
         }
@@ -49,7 +49,7 @@ public:
     }
     
     bool search(string word) {
-        return search(word.c_str(), root);
+        return Search(word.c_str(), root);
     }
 };
 
