@@ -9,13 +9,9 @@ public:
         vector<int> result;
         priority_queue<pair<int, int>> p;
         
-        for(int i=0 ; i<n ; i++) {
-            m[nums[i]]++;
-        }
+        for(int i=0 ; i<n ; i++) m[nums[i]]++;
         
-        for(auto it=m.begin() ; it!=m.end() ; it++) {
-            p.push({ it->second, it->first });
-        }
+        for(auto it=m.begin() ; it!=m.end() ; it++) p.push({ it->second, it->first });
         
         while(k--) {
             result.push_back(p.top().second);
