@@ -15,7 +15,6 @@ public:
         }
         
         for(int i=0 ; i<n ; i++) {
-            
             current[s[i]]++;
             
             // If we exceeds given Anagram P window size, then remove character appears before window starts
@@ -24,7 +23,6 @@ public:
             if(i >= m) current[s[i-m]] == 1 ? current.erase(s[i-m]) : current[s[i-m]]--;
             
             if(current == target) result.push_back(i-m+1);
-            
         }
         
         return result;
