@@ -49,6 +49,7 @@ public:
         
         // Now get the resultant string to be returned from the stack. 
         string result = "";
+        
         while(!st.empty()) {
             reverse(st.top().begin(), st.top().end());
             result += st.top();
