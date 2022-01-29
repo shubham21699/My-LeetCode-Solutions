@@ -44,7 +44,6 @@ public:
         }
         
         int result = 0;
-        
         find(root, targetSum, 0, result);
         return result;
     }
