@@ -24,7 +24,6 @@ class Solution {
         amountNotIncluding = maxAmount(root->left) + maxAmount(root->right);
         
         return m[root] = max(amountIncluding, amountNotIncluding);
-        
     }
     
 public:
@@ -35,6 +34,5 @@ public:
         
         // DFS Approach with Memoization
         return maxAmount(root);
-        
     }
 };
