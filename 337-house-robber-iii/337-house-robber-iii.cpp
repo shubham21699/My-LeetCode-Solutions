@@ -21,6 +21,7 @@ class Solution {
         
         if(root->left) amountIncluding += maxAmount(root->left->left) + maxAmount(root->left->right);
         if(root->right) amountIncluding += maxAmount(root->right->left) + maxAmount(root->right->right);
+        
         amountNotIncluding = maxAmount(root->left) + maxAmount(root->right);
         
         return m[root] = max(amountIncluding, amountNotIncluding);
