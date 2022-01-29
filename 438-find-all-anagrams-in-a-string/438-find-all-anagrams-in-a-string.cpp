@@ -5,9 +5,9 @@ public:
         int n = s.length();
         int m = p.length();
         vector<int> result;
-        if(m > n) return result;
+        if(m > n) return result; // If anagram size is more than that of the string to be matched.
         
-        unordered_map<char, int> target;
+        unordered_map<char, int> target; // Anagram p characters storage.
         unordered_map<char, int> current;
         
         for(int j=0 ; j<m ; j++) {
