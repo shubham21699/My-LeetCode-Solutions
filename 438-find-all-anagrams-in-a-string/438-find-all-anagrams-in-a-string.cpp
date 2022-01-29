@@ -10,7 +10,9 @@ public:
         unordered_map<char, int> target;
         unordered_map<char, int> current;
         
-        for(int j=0 ; j<m ; j++) target[p[j]]++;
+        for(int j=0 ; j<m ; j++) {
+            target[p[j]]++;
+        }
         
         for(int i=0 ; i<n ; i++) {
             
