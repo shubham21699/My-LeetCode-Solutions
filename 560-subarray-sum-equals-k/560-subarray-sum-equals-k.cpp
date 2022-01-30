@@ -3,7 +3,6 @@ public:
     int subarraySum(vector<int>& nums, int k) {
         
         int n = nums.size();
-        
         if(n == 1) {
             if(nums[0] == k) return 1;
             return 0;
