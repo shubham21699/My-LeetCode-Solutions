@@ -31,7 +31,7 @@ public:
             j++;
         }
         
-        double result;
+        double result = 0.0;
         int k = combine.size();
         
         if(k % 2 == 0) {
