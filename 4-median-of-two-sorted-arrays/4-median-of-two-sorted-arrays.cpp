@@ -11,7 +11,6 @@ public:
         int j = 0;
         
         while(i < n && j < m) {
-            
             if(nums1[i] < nums2[j]) {
                 combine.push_back(nums1[i]);
                 i++;
@@ -20,7 +19,6 @@ public:
                 combine.push_back(nums2[j]);
                 j++;
             }
-            
         }
         
         while(i < n) {
