@@ -10,11 +10,13 @@ public:
         
         // O(n) Approach:
         for(int i=0 ; i<n ; i++) {
+            
             if(nums[i] == i+1) continue;
             
             while(nums[i] >= 1 && nums[i] <= n && nums[i] != nums[nums[i]-1]) {
                 swap(nums[i], nums[nums[i]-1]);
             }
+            
         }
         
         for(int i=0 ; i<n ; i++) {
@@ -41,6 +43,7 @@ public:
         
 //         return result;
 
+        
 //         OR: Using Hash Table (Takes extra space)    
 //         unordered_map<int, int> m;
 //         for(int i=0 ; i<n ; i++) {
