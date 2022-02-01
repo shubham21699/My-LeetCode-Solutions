@@ -10,7 +10,7 @@ public:
         
         for(int i=0 ; i<n ; i++) {
             for(int j=0 ; j<m ; j++) {
-                rect[i][j] = matrix[i][j] == '0' ? 0 : 1;
+                rect[i][j] = matrix[i][j] - '0';
             }
         }
         
