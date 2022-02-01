@@ -52,12 +52,10 @@ public:
             }
             
             s += data[i];
-            
         }
         
         if(s.length()) q.push(s);
-        return deserialize_queue(q);
-        
+        return deserialize_queue(q);   
     }
 };
 
