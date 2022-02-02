@@ -22,7 +22,8 @@ class Solution {
         int sum = root->val + left_sum + right_sum;
         max_sum = max(max_sum, sum);
         
-        // Maximum path for parent call of root. This path must include at-most 1 child of root
+        // Maximum path for parent call of root. 
+        // This path must include at-most 1 child of root
         return max(max(left_sum, right_sum) + root->val, root->val);
     }
     
