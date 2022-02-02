@@ -12,10 +12,12 @@ public:
         for(int i=0 ; i<n ; i++) {
             
             if(s[i] == ')') {
+                
                 st.pop();
                 
                 if(!st.empty()) result = max(result, i - st.top());
                 else st.push(i);
+                
             }
             else st.push(i);
             
