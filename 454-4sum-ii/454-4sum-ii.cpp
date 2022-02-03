@@ -4,7 +4,7 @@ public:
         
         int n = nums1.size();
         if(n == 1) {
-            if(nums1[0] + nums2[0] + nums3[0] + nums4[0] == 0) return 1;
+            if((nums1[0] + nums2[0] + nums3[0] + nums4[0]) == 0) return 1;
             return 0;
         }
         
