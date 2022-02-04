@@ -4,7 +4,6 @@ public:
         
         int n = nums.size();
         unordered_map<int, int> m;
-        
         int sum = 0;
         int result = 0;
         
