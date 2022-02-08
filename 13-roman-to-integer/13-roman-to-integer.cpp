@@ -15,6 +15,7 @@ public:
         if(n == 1) return m[s[0]];
         
         int result = m[s[n-1]];
+        
         for(int i=n-2 ; i>=0 ; i--) {
             if(m[s[i]] < m[s[i+1]]) result -= m[s[i]];
             else result += m[s[i]];
