@@ -5,7 +5,7 @@ public:
         int n = nums.size();
         if(n <= 1) return n;
         
-        // No need to check 1st element so start from 2nd index.
+        // No need to check 1st element, so start checking from 2nd element.
         int k = 1;
         
         for(int i=1 ; i<n ; i++) {
