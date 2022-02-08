@@ -10,7 +10,6 @@ public:
 //         if(num < 10) return num;
         
 //         while(num >= 10) {
-            
 //             int x = 0;
             
 //             while(num) {
