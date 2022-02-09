@@ -8,8 +8,8 @@ public:
         while(n != 1) {
             
             // If this number already comes before, then this exists in loop so return false.
-            if(m[n] > 0) return false;
-            else m[n]++;
+            if(m[n] == 0) m[n]++;
+            else return false;
             
             int x = 0;
             while(n) {
