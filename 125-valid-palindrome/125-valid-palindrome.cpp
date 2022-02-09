@@ -3,7 +3,7 @@ public:
     bool isPalindrome(string s) {
         
         int n = s.length();
-        if(n <= 1) return true;
+        if(n == 1) return true;
         
         int i = 0;
         int j = n-1;
