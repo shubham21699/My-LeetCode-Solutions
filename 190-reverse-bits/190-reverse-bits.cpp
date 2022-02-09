@@ -14,6 +14,7 @@ public:
             
             // Bitwise right shift 'n' by 1
             n >>= 1;
+            
         }
         
         return reverse;
