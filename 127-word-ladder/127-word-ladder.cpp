@@ -22,8 +22,10 @@ public:
                 
                 for(int i=0 ; i<word.length() ; i++) {
                     char c = word[i];
+                    
                     for(int j=0 ; j<26 ; j++) {
                         word[i] = 'a' + j;
+                        
                         if(dict.find(word) != dict.end()) {
                             q.push(word);
                         }
