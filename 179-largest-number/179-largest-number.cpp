@@ -15,7 +15,7 @@ public:
         string result = "";
         for(int i=0 ; i<n ; i++) result += v[i];
         
-        while(result[0] == '0' && result.length() > 1) {
+        while(result[0] == '0' and result.length() > 1) {
             result.erase(0, 1);
         }
         
