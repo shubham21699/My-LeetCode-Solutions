@@ -12,13 +12,13 @@ public:
         string ans = "";
         if(numerator<0 ^ denominator<0) ans += '-';
         ans += to_string(n / d);
+        
         if(r == 0) return ans;
         
         ans += '.';
         unordered_map<long, int> m;
         
         while(r) {
-            
             if(m.find(r) != m.end()) {
                 ans.insert(m[r], "(");
                 ans += ')';
@@ -29,7 +29,6 @@ public:
             r *= 10;
             ans += to_string(r / d);
             r %= d;
-            
         }
         
         return ans;;
