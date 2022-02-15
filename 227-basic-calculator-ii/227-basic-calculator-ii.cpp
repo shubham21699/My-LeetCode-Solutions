@@ -34,6 +34,7 @@ public:
                 
                 continue;
             }
+            // If current character is an operator.
             else if(s[i] != ' ') op = s[i];
             
             i++;
