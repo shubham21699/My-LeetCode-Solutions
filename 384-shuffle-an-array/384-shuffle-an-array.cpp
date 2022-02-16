@@ -17,7 +17,6 @@ public:
         int n = shuffled.size();
         int x = rand() % n;
         int y = rand() % n;
-        
         swap(shuffled[x], shuffled[y]);
         return shuffled;
     }
