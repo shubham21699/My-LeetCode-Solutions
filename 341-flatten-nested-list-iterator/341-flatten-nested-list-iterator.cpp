@@ -31,11 +31,9 @@ public:
     }
     
     int next() {
-        
         int result = nodes.top()->getInteger();
         nodes.pop();
         return result;
-        
     }
     
     // Only flatten the Current Level untill we find an Integer.
