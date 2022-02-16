@@ -20,6 +20,7 @@ class Solution {
         
         ListNode* next = head->next;
         ListNode* prev = head;
+        
         next->next = prev;
         prev->next = NULL;
         
