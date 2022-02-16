@@ -23,6 +23,7 @@ class Solution {
         next->next = prev;
         prev->next = NULL;
         
+        // If next pair is available that can be swapped, then recur to that pair.
         if(nextPairHead) prev->next = swap(nextPairHead);
         return next;
     }
