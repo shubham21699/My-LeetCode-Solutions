@@ -18,6 +18,7 @@ public:
             if(a < c && b < d) {
                 count_of_non_covered_intervals++;
             }
+            
             if(d > b) {
                 a = c;
                 b = d;
