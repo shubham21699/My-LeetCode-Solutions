@@ -59,6 +59,7 @@ class Solution {
         vector<vector<int>> result;
         
         if(start > end) return result;
+        
         if(start == end) {
             result.push_back({ buildings[start][0], buildings[start][2] });
             result.push_back({ buildings[start][1], 0 });
