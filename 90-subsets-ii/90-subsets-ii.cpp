@@ -1,10 +1,11 @@
 class Solution {
     void subset(vector<int>& nums, vector<vector<int>>& result, vector<int> v, int index, int n) {
         
-        result.push_back(v);
+        if(index >= n) return;
         
         for(int i=index ; i<n ; i++) {
             v.push_back(nums[i]);
+            result.push_back(v);
             
             subset(nums, result, v, i+1, n);
             
@@ -25,6 +26,7 @@ public:
         
         vector<vector<int>> result;
         vector<int> v;
+        result.push_back(v);
         subset(nums, result, v, 0, n);
         
         sort(result.begin(), result.end());
