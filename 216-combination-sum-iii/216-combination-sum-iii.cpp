@@ -8,11 +8,9 @@ class Solution {
         if(n <= 0 || value > 9) return;
         
         for(int i=value ; i<=9 ; i++) {
-            
             v.push_back(i);
             combination(result, v, k, n-i, i+1);
             v.pop_back(); // Backtrack
-            
         }
         
     }
