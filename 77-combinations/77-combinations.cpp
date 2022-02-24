@@ -9,9 +9,7 @@ class Solution {
         
         for(int i=index ; i<=n ; i++) {
             v.push_back(i);
-            
             combination(result, v, n, k, i+1);
-            
             v.pop_back(); // Backtrack
         }
         
