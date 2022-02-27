@@ -10,6 +10,7 @@ public:
         }
         
         priority_queue<pair<int, char>> p;
+        
         for(auto it=m.begin() ; it!=m.end() ; it++) {
             p.push({ it->second, it->first });
         }
