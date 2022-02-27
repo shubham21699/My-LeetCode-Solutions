@@ -17,8 +17,7 @@ public:
         if(!root->left && !root->right) return 1;
         
         unsigned long long int maxWidth = 1;
-        
-        queue<pair<TreeNode*, unsigned long long int> > q;
+        queue<pair<TreeNode*, unsigned long long int>> q;
         q.push({ root, 1 });
         
         while(!q.empty()) {
