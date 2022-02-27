@@ -19,7 +19,6 @@ public:
         
         for(int i=0 ; i<n ; i++) {
             m[s[i]]++;
-            
             if(m[s[i]] > ceil(n/2.0)) return "";
         }
         
@@ -32,7 +31,6 @@ public:
         string result = "";
         
         while(pq.size() > 1) {
-            
             auto p1 = pq.top();
             pq.pop();
             auto p2 = pq.top();
@@ -46,7 +44,6 @@ public:
             
             if(p1.first) pq.push(p1);
             if(p2.first) pq.push(p2);
-            
         }
         
         if(!pq.empty()) {
