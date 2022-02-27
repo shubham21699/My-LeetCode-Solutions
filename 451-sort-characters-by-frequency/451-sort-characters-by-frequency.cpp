@@ -18,13 +18,13 @@ public:
         string result = "";
         
         while(!p.empty()) {
-            
             int n = p.top().first;
+            
             while(n--) {
                 result += p.top().second;
             }
-            p.pop();
             
+            p.pop();
         }
         
         return result;
