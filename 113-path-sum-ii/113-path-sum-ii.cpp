@@ -22,7 +22,7 @@ class Solution {
         
         if(root->left) getPath(root->left, sum + root->val, target, result, v);
         if(root->right) getPath(root->right, sum + root->val, target, result, v);
-        v.pop_back();
+        v.pop_back(); // Backtrack
         
     }
     
