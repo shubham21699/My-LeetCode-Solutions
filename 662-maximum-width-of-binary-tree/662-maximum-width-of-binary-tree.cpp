@@ -27,14 +27,12 @@ public:
             int n = q.size();
             
             while(n--) {
-                
                 TreeNode* current = q.front().first;
                 right = q.front().second;
                 q.pop();
                 
                 if(current->left) q.push({ current->left, right*2 });
                 if(current->right) q.push({ current->right, right*2 + 1 });
-                
             }
             
             maxWidth = max(maxWidth, right - left + 1);
