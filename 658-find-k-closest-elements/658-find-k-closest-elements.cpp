@@ -9,19 +9,16 @@ public:
         priority_queue<int> pq;
         
         for(int i=n-1 ; i>=0 ; i--) {
-            
             if(pq.size() >= k) {
                 if(abs(arr[i] - x) < abs(pq.top() - x) || ((abs(arr[i] - x) == abs(pq.top() - x) && arr[i] < pq.top()))) {
                     pq.pop();
                     pq.push(arr[i]);
                 }
                 else continue;
-                   
             }
             else {
                 pq.push(arr[i]);
             }
-            
         }
                    
         vector<int> result;
