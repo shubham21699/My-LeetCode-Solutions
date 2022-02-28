@@ -16,7 +16,6 @@ public:
                     pq.push(arr[i]);
                 }
                 else continue;
-                   
             }
             else {
                 pq.push(arr[i]);
