@@ -4,7 +4,7 @@ class Solution {
         // If we've filled all the subsets then definitely a valid partition exists so return true
         if(k == 1) return true;
         
-        if(current_index >= nums.size()) return false;
+        if(current_index >= nums.size() || current_sum > target) return false;
         
         // If we've filled one subset completely, we'll focus on filling the next subset 
         // starting from the 0th index
