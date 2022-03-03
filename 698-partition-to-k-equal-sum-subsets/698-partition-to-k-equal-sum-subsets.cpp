@@ -17,7 +17,9 @@ class Solution {
             // element to our current subset won't exceed it's sum from the desired value , then add it)
             if(!visited[i] && current_sum+nums[i] <= target) {
                 visited[i] = true;
+                
                 if(check(nums, visited, current_sum+nums[i], k, i+1, target)) return true;
+                
                 visited[i] = false;
             }
             
@@ -37,6 +39,7 @@ public:
         
         // if sum is not divisable by k then it can not be partitioned 
         if(n < k || sum % k != 0) return false;
+        
         int target = sum/k;
         vector<bool> visited(n, false);
         
