@@ -21,11 +21,9 @@ public:
             head->next = deleteDuplicates(next);
             return head;
         }
-        else {
-            while(next && next->val == duplicate_val) next = next->next;
-            return deleteDuplicates(next);
-        }
-        
+        // Else
+        while(next && next->val == duplicate_val) next = next->next;
+        return deleteDuplicates(next);
         
 //         OR: Using HashMap
 //         ListNode* temp = head;
