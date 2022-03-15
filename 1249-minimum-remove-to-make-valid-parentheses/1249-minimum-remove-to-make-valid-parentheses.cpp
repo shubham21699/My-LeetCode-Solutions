@@ -10,10 +10,11 @@ public:
             if(s[i] == '(') st.push(i);
             else if(s[i] == ')') {
                 if(!st.empty()) st.pop();
-                else s[i] = '#';
+                else s[i] = '#'; // Invalid parantheses position
             }
         }
         
+        // All the indexes left in stack are invalid.
         while(!st.empty()) {
             s[st.top()] = '#';
             st.pop();
