@@ -20,7 +20,7 @@ public:
             st.pop();
         }
         
-        // Removing all the '#' from invalids parantheses position.
+        // Removing all those '#' from invalis parantheses position from string.
         s.erase(remove(s.begin(), s.end(), '#'), s.end());
         return s;
     }
