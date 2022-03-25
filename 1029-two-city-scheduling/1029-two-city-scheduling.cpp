@@ -4,7 +4,7 @@ public:
         
         int n = costs.size();
         sort(costs.begin(), costs.end(), [](vector<int> a, vector<int> b) {
-            return a[0]-a[1] < b[0]-b[1]; 
+            return (a[0] - a[1]) < (b[0] - b[1]); 
         });
         
         int cost = 0;
