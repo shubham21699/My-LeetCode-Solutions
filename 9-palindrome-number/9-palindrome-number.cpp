@@ -4,7 +4,7 @@ public:
         
         if(x < 0) return false;
         long long int rev = 0;
-        int copy = x;
+        long long int copy = x;
         
         while(copy) {
             rev = rev*10 + (copy%10);
