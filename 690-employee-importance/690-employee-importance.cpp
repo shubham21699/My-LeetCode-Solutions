@@ -14,7 +14,7 @@ public:
         
         int n = employees.size();
         unordered_map<int, int> imp;
-        unordered_map<int, vector<int>> graph;
+        map<int, vector<int>> graph;
         
         for(int i=0 ; i<n ; i++) {
             graph[employees[i]->id] = employees[i]->subordinates;
