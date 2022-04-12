@@ -11,7 +11,7 @@ public:
             }
         }
         
-        if(k) return -1;
+        if(k > 0) return -1;
         return kth_factor;
     }
 };
