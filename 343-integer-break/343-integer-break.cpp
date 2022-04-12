@@ -5,6 +5,7 @@ public:
         if(n <= 2) return 1;
         if(n == 3) return 2;
         if(n == 4) return 4;
+        
         vector<int> dp(n+1, 0);
         
         /*
@@ -19,7 +20,8 @@ public:
         10 => 3, 7 => 36
 
         By observation, when you get maximum, one of the num is always 3.
-        After 3, the result will be larger than or equal the number itself. */
+        After 3, the result will be larger than or equal the number itself. 
+        */
         
         dp[1] = 1;
         dp[2] = 1;
