@@ -23,7 +23,7 @@ public:
                 
             }
             
-            if(carry) result[i] += carry;
+            result[i] += carry;
             
         }
         
