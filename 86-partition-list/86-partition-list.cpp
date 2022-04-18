@@ -31,10 +31,12 @@ public:
             }
             
             head = head->next;
+            
         }
         
         t2->next = NULL;
         t1->next = greaterThanX->next;
+        
         return lessThanX->next;
     }
 };
