@@ -23,11 +23,9 @@ public:
         vector<int> v = avg[{ startStation, endStation }];
         double ans = 0.0;
         
-        for(int i=0 ; i<v.size() ; i++) {
-            ans += v[i];
-        }
+        for(int i=0 ; i<v.size() ; i++) ans += v[i];
         
-        ans /= (v.size() / 1.0);
+        ans /= v.size();
         return ans;
     }
 };
