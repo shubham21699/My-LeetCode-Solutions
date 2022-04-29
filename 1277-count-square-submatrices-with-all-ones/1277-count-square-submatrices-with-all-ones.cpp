@@ -4,6 +4,7 @@ public:
         
         int n = matrix.size();
         int m = matrix[0].size();
+        
         int result = 0;
         
         for(int i=0 ; i<n ; i++) {
@@ -11,6 +12,7 @@ public:
                 if(i>0 && j>0 && matrix[i][j]>0) {
                     matrix[i][j] = min({ matrix[i-1][j], matrix[i][j-1], matrix[i-1][j-1] }) + 1;
                 }
+                
                 result += matrix[i][j];
             }
         }
