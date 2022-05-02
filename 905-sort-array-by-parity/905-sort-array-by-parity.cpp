@@ -14,11 +14,13 @@ public:
         
         int i = 0;
         
-        while(i < n && nums[i]%2 == 0) i++;
-        
+        while(i < n && nums[i]%2 == 0) {
+            i++;
+        }
         int j = i;
         
         while(i < n) {
+            
             if(nums[i] % 2 == 0) {
                 swap(nums[i], nums[j]);
                 j++;
