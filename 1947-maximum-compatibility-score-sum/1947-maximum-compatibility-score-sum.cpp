@@ -4,17 +4,14 @@ public:
         
         int n = students.size();
         vector<int> permute(n);
-        
         for(int i=0 ; i<n ; i++) permute[i] = i;
         
         int maxScore = 0;
         
         do {
-            
             int score = 0;
             
             for(int i=0 ; i<n ; i++) {
-                
                 int bit = 0;
                 int k = permute[i];
                 
