@@ -8,8 +8,7 @@ public:
         
         unordered_map<char, int> mp;
         for(int i=0 ; i<n ; i++) {
-            if(secret[i] == guess[i]) continue;
-            mp[secret[i]]++;
+            if(secret[i] != guess[i]) mp[secret[i]]++;
         }
         
         for(int i=0 ; i<n;  i++) {
