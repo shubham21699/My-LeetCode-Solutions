@@ -7,6 +7,7 @@ public:
         
         v = nums;
         sum = accumulate(v.begin(), v.end(), 0);
+        
     }
     
     void update(int index, int val) {
@@ -14,6 +15,7 @@ public:
         int diff = val - v[index];
         sum += diff;
         v[index] = val;
+    
     }
     
     int sumRange(int left, int right) {
