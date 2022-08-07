@@ -4,7 +4,7 @@ public:
         
         int n = items1.size();
         int m = items2.size();
-        unordered_map<int, int> mp;
+        map<int, int> mp;
         
         for(int i=0 ; i<n ; i++) mp[items1[i][0]] = items1[i][1];
         for(int i=0 ; i<m ; i++) mp[items2[i][0]] += items2[i][1];
@@ -14,7 +14,6 @@ public:
             res.push_back({ it->first, it->second });
         }
         
-        sort(res.begin(), res.end());
         return res;
     }
 };
