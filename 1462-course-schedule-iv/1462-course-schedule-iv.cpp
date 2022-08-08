@@ -18,11 +18,9 @@ public:
         int n = prerequisites.size();
         int q = queries.size();
         unordered_map<int, set<int>> graph;
-        vector<int> inDegree(numCourses);
         
         for(int i=0 ; i<n ; i++) {
             graph[prerequisites[i][1]].insert(prerequisites[i][0]);
-            inDegree[prerequisites[i][0]]++;
         }
         
         unordered_map<int, set<int>> mp;
