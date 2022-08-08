@@ -3,7 +3,7 @@ public:
     void dfs(unordered_map<int, set<int>>& graph, vector<bool>& visited, int curr, int preNode, unordered_map<int, set<int>>& mp) {
         
         visited[curr] = true;
-        mp[preNode].insert(curr);
+        mp[curr].insert(preNode);
         
         for(auto node : graph[curr]) {
             if(!visited[node]) {
@@ -33,7 +33,7 @@ public:
         vector<bool> res(q);
         
         for(int i=0 ; i<q ; i++) {
-            if(mp[queries[i][1]].find(queries[i][0]) != mp[queries[i][1]].end()) {
+            if(mp[queries[i][0]].find(queries[i][1]) != mp[queries[i][0]].end()) {
                 res[i] = true;
             }
         }
