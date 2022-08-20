@@ -6,30 +6,58 @@ public:
         if(n == 1) return true;
         if(s.back() != '0') return false;
         
-        // It's a bottom-up DP implementation. The boolean value represents whether this position 
-        // is reachable from start. So the first step is to generate the table. Here the table 
-        // was pre-labeled True or False, thus '1's are already labeled False.
-        // To determine the state of dp[i], one need to check the states in window dp[i-maxJump : i-minJump], 
-        // because any one of them can reach i if it's labeled True.
-        // Then you need to check if there is a True in this window. As this is a sliding 
-        // window problem, so we don't need to calculate it everytime. We only need to remove the 
-        // effect from dp[i-maxJump-1] and add the dp[i-minJump]. This is done by these two lines of 
-        // code: prevPossPosition += dp[i - minJump] and prevPossPosition -= dp[i - maxJump - 1]
-        // The if statements if i >= minJump: and if i > maxJump: are dealing with the initial boundary.
+        // BFS Approach:
+        queue<int> q;
+        q.push(0);
+        int currMax = 0;
         
-        vector<bool> dp(n, false);
-        dp[0] = true;
-        int prevPossPosition = 0;
-        
-        for(int i=1 ; i<n ; i++) {
-
-            if(i >= minJump) prevPossPosition += dp[i-minJump];
-            if(i > maxJump) prevPossPosition -= dp[i-maxJump-1];
+        while(!q.empty()) {
             
-            dp[i] = prevPossPosition > 0 && s[i] == '0';
+            int k = q.size();
+            
+            while(k--) {
+                
+                int curr = q.front();
+                q.pop();
+                
+                if(curr == n-1) return true;
+                
+                for(int i=max(curr+minJump, currMax) ; i<=curr+maxJump && i<n; i++) {
+                    if(s[i] == '0') q.push(i);
+                }
+                
+                currMax = max(currMax, curr + maxJump + 1);
+            }
             
         }
         
-        return dp[n-1];
+        return false;
+        
+//         // OR: DP + Sliding Window
+//         // It's a bottom-up DP implementation. The boolean value represents whether this position 
+//         // is reachable from start. So the first step is to generate the table. Here the table 
+//         // was pre-labeled True or False, thus '1's are already labeled False.
+//         // To determine the state of dp[i], one need to check the states in window dp[i-maxJump : i-minJump], 
+//         // because any one of them can reach i if it's labeled True.
+//         // Then you need to check if there is a True in this window. As this is a sliding 
+//         // window problem, so we don't need to calculate it everytime. We only need to remove the 
+//         // effect from dp[i-maxJump-1] and add the dp[i-minJump]. This is done by these two lines of 
+//         // code: prevPossPosition += dp[i - minJump] and prevPossPosition -= dp[i - maxJump - 1]
+//         // The if statements if i >= minJump: and if i > maxJump: are dealing with the initial boundary.
+        
+//         vector<bool> dp(n, false);
+//         dp[0] = true;
+//         int prevPossPosition = 0;
+        
+//         for(int i=1 ; i<n ; i++) {
+
+//             if(i >= minJump) prevPossPosition += dp[i-minJump];
+//             if(i > maxJump) prevPossPosition -= dp[i-maxJump-1];
+            
+//             dp[i] = prevPossPosition > 0 && s[i] == '0';
+            
+//         }
+        
+//         return dp[n-1];
     }
 };
