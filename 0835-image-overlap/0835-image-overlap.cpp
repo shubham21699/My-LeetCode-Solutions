@@ -17,7 +17,7 @@ public:
         
         for(auto [i1, j1] : img1sCoordinates) {
             for(auto [i2, j2] : img2sCoordinates) {
-                // Distance between those coordinates of both images will remain the same which 
+                // Difference in indices between those coordinates of both images will remain the same which 
                 // will overlap them after translating them.
                 mp[{ i1-i2, j1-j2 }]++;
                 result = max(result, mp[{ i1-i2, j1-j2 }]);
