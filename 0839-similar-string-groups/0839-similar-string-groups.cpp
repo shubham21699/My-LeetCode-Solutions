@@ -47,6 +47,19 @@ public:
 
 class Solution {
 public:
+    void dfs(int node, vector<int>& visited, vector<vector<int>>& graph) {
+        
+        visited[node] = 1;
+        
+        for(auto& child : graph[node]) {
+            
+            if(!visited[child]) {
+                dfs(child, visited, graph);
+            }
+            
+        }
+    }
+    
     bool isSimilar(string& x, string& y) {
         
         if(x == y) return true;
@@ -64,15 +77,40 @@ public:
     int numSimilarGroups(vector<string>& strs) {
         
         int n = strs.size();
-        UnionFind uf(n);
-        int count = 0;
+        vector<vector<int>> graph(n);
         
-        for(int i=0 ; i<n ; i++) {
-            for(int j=i+1 ; j<n ; j++) {
-                if(isSimilar(strs[i], strs[j])) uf.union_(i, j);
+        for(int i=1 ; i<n ; i++) {
+            for(int j=0 ; j<i ; j++) {
+                
+                if(isSimilar(strs[i], strs[j])){
+                    graph[i].push_back(j);
+                    graph[j].push_back(i);
+                }
+                
             }
         }
         
-        return uf.count;
+        int count = 0;
+        vector<int> visited(n);
+        
+        for(int i=0 ; i<n ; i++) {
+            if(!visited[i]) {
+                dfs(i, visited, graph);
+                count++;
+            }
+        }
+        
+        return count;
+        
+//         UnionFind uf(n);
+//         int count = 0;
+        
+//         for(int i=0 ; i<n ; i++) {
+//             for(int j=i+1 ; j<n ; j++) {
+//                 if(isSimilar(strs[i], strs[j])) uf.union_(i, j);
+//             }
+//         }
+        
+//         return uf.count;
     }
 };
