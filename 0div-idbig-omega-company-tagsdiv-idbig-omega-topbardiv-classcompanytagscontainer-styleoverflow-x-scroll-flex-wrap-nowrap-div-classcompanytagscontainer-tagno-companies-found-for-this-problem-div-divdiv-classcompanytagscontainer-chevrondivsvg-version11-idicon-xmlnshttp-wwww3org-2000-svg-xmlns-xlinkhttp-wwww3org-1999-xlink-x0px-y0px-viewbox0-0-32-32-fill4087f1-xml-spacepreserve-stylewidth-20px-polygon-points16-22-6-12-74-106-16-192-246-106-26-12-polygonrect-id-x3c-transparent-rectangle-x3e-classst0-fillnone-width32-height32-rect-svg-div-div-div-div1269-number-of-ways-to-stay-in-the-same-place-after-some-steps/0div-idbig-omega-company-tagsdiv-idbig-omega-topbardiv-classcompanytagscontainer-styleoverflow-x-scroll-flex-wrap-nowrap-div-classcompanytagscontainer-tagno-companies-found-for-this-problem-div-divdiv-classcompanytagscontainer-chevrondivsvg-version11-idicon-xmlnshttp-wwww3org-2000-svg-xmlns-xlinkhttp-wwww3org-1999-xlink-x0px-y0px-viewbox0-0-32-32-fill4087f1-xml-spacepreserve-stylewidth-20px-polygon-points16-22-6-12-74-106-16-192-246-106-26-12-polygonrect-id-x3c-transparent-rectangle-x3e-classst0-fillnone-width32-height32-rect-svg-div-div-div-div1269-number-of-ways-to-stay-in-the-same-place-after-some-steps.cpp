@@ -17,6 +17,7 @@ public:
     
     int numWays(int steps, int arrLen) {
         
+        // We can ingore array elements greater than steps/2, as we won't able to go back to the first element from there.
         vector<vector<int>> dp(steps/2+1, vector<int>(steps+1, -1));
         return ways(0, arrLen, steps, dp);
     }
